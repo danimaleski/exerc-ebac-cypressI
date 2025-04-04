@@ -1,0 +1,22 @@
+{
+  "name": "exerc-ebac-cypressi",
+  "version": "1.0.0",
+  "description": "Exercício da EBAC com Cypress sobre App Actions e Page Objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danimaleski/exerc-ebac-cypressI.git"
+  },
+  "author": "daniella",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danimaleski/exerc-ebac-cypressI/issues"
+  },
+  "homepage": "https://github.com/danimaleski/exerc-ebac-cypressI#readme",
+  "devDependencies": {
+    "cypress": "^14.2.1"
+  }
+}
