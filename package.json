@@ -1,7 +1,7 @@
 {
   "name": "exerc-ebac-cypressi",
   "version": "1.0.0",
-  "description": "Exercício da EBAC com Cypress sobre App Actions e Page Objects",
+  "description": "Exercício CI com Git Hub Actions",
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run"
