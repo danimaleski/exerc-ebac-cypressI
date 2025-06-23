@@ -12,12 +12,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
     
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '18'
+          
+      - name: install dependencies
+        run: npm install
+
+      - name: rodar testes e gerar relatório
+        run: npm run test:report
         
       - name: Cypress run
         uses: cypress-io/github-action@v2
@@ -25,14 +31,10 @@ jobs:
         with: 
           install-command: npm install
           browser: chrome
-          command: cypress open --config-file=cypress.config.js
+          command: npx cypress run --config-file=cypress.config.js
 
       - name: Publish Report
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-  
-
-
-
+          publish_dir: ./mochawesome-report
