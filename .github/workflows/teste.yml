@@ -21,9 +21,6 @@ jobs:
           
       - name: install dependencies
         run: npm install
-
-      - name: rodar testes e gerar relatório
-        run: npm run test:report
         
       - name: Cypress run
         uses: cypress-io/github-action@v2
@@ -31,8 +28,10 @@ jobs:
         with: 
           install-command: npm install
           browser: chrome
-          start: npm start
           command: npx cypress run --config-file=cypress.config.js
+          
+      - name: rodar testes e gerar relatório
+        run: npm run test:report
 
       - name: Publish Report
         uses: peaceiris/actions-gh-pages@v3

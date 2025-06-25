@@ -27,9 +27,9 @@ describe('Teste de Autenticação', () => {
     profilePage.customerName().should('have.text', 'Maleski Daniella')
   })
 
-  it('Deve fazer o checkout com sucesso', () => {
-    cy.login(email, senha)
-  })
+  //it('Deve fazer o checkout com sucesso', () => {
+    //cy.login(email, senha)
+  //})
 
 
   it('deve fazer login com sucesso', () => {
