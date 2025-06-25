@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
     
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: '18'
           
@@ -31,6 +31,7 @@ jobs:
         with: 
           install-command: npm install
           browser: chrome
+          start: npm start
           command: npx cypress run --config-file=cypress.config.js
 
       - name: Publish Report

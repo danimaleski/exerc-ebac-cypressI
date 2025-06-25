@@ -35,7 +35,7 @@ Cypress.Commands.add('login', (email, senha) => {
     homePage.openMenu('Browse')
     browsePage.productDetails()
     browsePage.addToCart()
-    //addressPage.address(name, number, endereco, city, state, zipcode) //somente na primeira vez
+    addressPage.address(name, number, endereco, city, state, zipcode) //somente na primeira vez
     checkoutPage.selectAddressOrContinueToPayment()
     checkoutPage.completeCheckout()
 })

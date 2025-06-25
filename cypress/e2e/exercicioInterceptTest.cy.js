@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 const { email, senha } = require('../fixtures/data.json')
 const { browsePage } = require('../support/pages/browse.page')

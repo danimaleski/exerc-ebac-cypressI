@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 const { homePage } = require("../support/pages/home.page")
 const loginPage = require("../support/pages/login.page")

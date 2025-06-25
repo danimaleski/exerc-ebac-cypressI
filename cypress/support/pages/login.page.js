@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 class LoginPage {
     get #email() { return cy.get('[data-testid="email"]')} 
