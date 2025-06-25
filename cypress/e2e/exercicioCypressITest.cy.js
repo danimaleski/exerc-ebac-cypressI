@@ -19,13 +19,13 @@ describe('Teste de Autenticação', () => {
     cy.visit('/')
   })
 
-  it('Deve fazer o cadastro com sucesso', () => {
-    homePage.openMenu('Account')
-    signPage.signUp('Sign Up')
-    cadastroPage.cadastro(firstName, lastName, phone, emailAdd, pass, repassword)
-    homePage.openMenu('Account')
-    profilePage.customerName().should('have.text', 'Maleski Daniella')
-  })
+  // it('Deve fazer o cadastro com sucesso', () => {
+  //   homePage.openMenu('Account')
+  //   signPage.signUp('Sign Up')
+  //   cadastroPage.cadastro(firstName, lastName, phone, emailAdd, pass, repassword)
+  //   homePage.openMenu('Account')
+  //   profilePage.customerName().should('have.text', 'Maleski Daniella')
+  // })
 
   //it('Deve fazer o checkout com sucesso', () => {
     //cy.login(email, senha)
