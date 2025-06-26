@@ -4,8 +4,8 @@
   "description": "Exercício CI com Git Hub Actions",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run", 
-    "test:report": "npx mochawesome-merge ./mochawesome-report/mochawesome*.json  > mochawesome-report/report.json && npx marge mochawesome-report/report.json"
+    "test": "npx cypress run --reporter mochawesome --reporter-options reportDir=mochawesome-report,html=true,json=true",
+  "test:report": "npx mochawesome-merge ./mochawesome-report/mochawesome*.json > mochawesome-report/report.json && npx marge mochawesome-report/report.json"
   },
   "repository": {
     "type": "git",
