@@ -29,9 +29,21 @@ jobs:
           install-command: npm install
           browser: chrome
           command: npx cypress run --config-file=cypress.config.js
-          
-      - name: rodar testes e gerar relatório
-        run: npm run test:report
+
+      - name: Ensure reports directory exists
+        run: mkdir -p mochawesome-report
+
+      - name: Verify reports exist
+        run: |
+          if [ ! -f ./mochawesome-report/mochawesome*.json ]; then
+            echo "No mochawesome report files found!"
+            exit 1
+          fi
+
+      - name: Merge reports
+        run: npx mochawesome-merge mochawesome-report/mochawesome*.json > mochawesome-report/report.json
+
+
 
       - name: Publish Report
         uses: peaceiris/actions-gh-pages@v3
