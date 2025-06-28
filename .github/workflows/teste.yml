@@ -6,6 +6,9 @@ on:
     
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   test:
     name: deploy to staging
@@ -29,9 +32,6 @@ jobs:
           install-command: npm install
           browser: chrome
           command: npx cypress run --config-file=cypress.config.js
-      - name: testes
-        run: npm run test
-
 
       - name: rodar testes e gerar relatório
         run: npm run test:report
